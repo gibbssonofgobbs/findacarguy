@@ -1,4 +1,7 @@
 import { useState } from "react"
+import heroCar from "./assets/hero-car.jpg"
+import car2 from "./assets/car2.jpg"
+import car3 from "./assets/car3.jpg"
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500&display=swap');
@@ -655,7 +658,7 @@ export default function FindACarGuy() {
               </div>
               <div>
                 <div className="facg-photo-main">
-                  <img src="hero-car.jpg" alt="Charlie's 2000 Subaru Impreza 2.5 RS — STi swapped" style={{width:"100%",height:"100%",objectFit:"cover"}} />
+                  <img src={heroCar} alt="Charlie's 2000 Subaru Impreza 2.5 RS — STi swapped" style={{width:"100%",height:"100%",objectFit:"cover"}} />
                 </div>
                 <p style={{fontSize:"12px",color:"#aaa",marginTop:"6px",marginBottom:"8px",fontStyle:"italic"}}>
                   2000 Subaru Impreza 2.5 RS — STi swapped. Totaled by a drowsy driver. Finding its replacement is what made me realize I was pretty good at this.
@@ -663,13 +666,13 @@ export default function FindACarGuy() {
                 <div className="facg-photo-grid">
                   <div>
                     <div className="facg-photo-sm">
-                      <img src="car2.jpg" alt="My wife's car — the day we bought it" style={{width:"100%",height:"100%",objectFit:"cover"}} />
+                      <img src={car2} alt="My wife's car — the day we bought it" style={{width:"100%",height:"100%",objectFit:"cover"}} />
                     </div>
                     <p style={{fontSize:"11px",color:"#aaa",marginTop:"4px",fontStyle:"italic"}}>She's not only a wife, she's a member. Helped her trade out of a 2007 RAV4.</p>
                   </div>
                   <div>
                     <div className="facg-photo-sm">
-                      <img src="car3.jpg" alt="My Shelby GT350 — red, no stripe, comfy seats" style={{width:"100%",height:"100%",objectFit:"cover"}} />
+                      <img src={car3} alt="My Shelby GT350 — red, no stripe, comfy seats" style={{width:"100%",height:"100%",objectFit:"cover"}} />
                     </div>
                     <p style={{fontSize:"11px",color:"#aaa",marginTop:"4px",fontStyle:"italic"}}>My GT350. Wanted one forever. Red, no stripe, comfy seats. Found it myself.</p>
                   </div>
