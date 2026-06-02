@@ -1,7 +1,4 @@
 import { useState } from "react"
-import heroCar from "./assets/hero-car.jpg"
-import car2 from "./assets/car2.jpg"
-import car3 from "./assets/car3.jpg"
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500&display=swap');
@@ -526,7 +523,7 @@ export default function FindACarGuy() {
         {/* NAV */}
         <nav className="facg-nav">
           <a href="#" className="facg-nav-logo">FindACarGuy</a>
-          <button className="facg-nav-cta" onClick={scrollToForm}>Get started — $300</button>
+          <button className="facg-nav-cta" onClick={scrollToForm}>Get started</button>
         </nav>
 
         {/* HERO */}
@@ -591,10 +588,11 @@ export default function FindACarGuy() {
         <section className="facg-section">
           <div className="facg-section-inner" style={{ textAlign: "center" }}>
             <p className="facg-label">Pricing</p>
-            <h2>One flat fee. No surprises.</h2>
-            <div className="facg-pricing-wrap">
+            <h2>Transparent pricing. No surprises.</h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem", maxWidth: 640, margin: "2.5rem auto 0" }}>
               <div className="facg-price-card">
                 <div className="facg-price-amount"><sup>$</sup>300</div>
+                <p className="facg-price-desc" style={{ fontWeight: 500, color: "#1a1a1a", marginBottom: "0.5rem" }}>Standard Search</p>
                 <p className="facg-price-desc">Up to 10 hand-picked options across two rounds if needed.</p>
                 <ul className="facg-price-list">
                   {[
@@ -606,9 +604,24 @@ export default function FindACarGuy() {
                     "Follow-up Q&A included",
                   ].map(item => <li key={item}>{item}</li>)}
                 </ul>
-                <button className="facg-btn-primary" style={{ width: "100%" }} onClick={scrollToForm}>
-                  Get started
-                </button>
+                <a className="facg-btn-primary" style={{ width: "100%", textAlign: "center", justifyContent: "center" }} href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00" target="_blank" rel="noreferrer">Get started</a>
+              </div>
+              <div className="facg-price-card" style={{ borderColor: "#1D9E75", position: "relative" }}>
+                <div style={{ position: "absolute", top: "-12px", left: "50%", transform: "translateX(-50%)", background: "#1D9E75", color: "#fff", fontSize: "11px", fontWeight: 500, padding: "4px 14px", borderRadius: "100px", whiteSpace: "nowrap" }}>Most popular</div>
+                <div className="facg-price-amount"><sup>$</sup>450</div>
+                <p className="facg-price-desc" style={{ fontWeight: 500, color: "#1a1a1a", marginBottom: "0.5rem" }}>Search + Dealer Outreach</p>
+                <p className="facg-price-desc">Everything in Standard, plus I contact dealers on your behalf.</p>
+                <ul className="facg-price-list">
+                  {[
+                    "Everything in Standard",
+                    "I contact dealers for you",
+                    "Screen for red flags",
+                    "Ask the right questions",
+                    "Report back before you call",
+                    "Never make an awkward call",
+                  ].map(item => <li key={item}>{item}</li>)}
+                </ul>
+                <a className="facg-btn-primary" style={{ width: "100%", textAlign: "center", justifyContent: "center" }} href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00" target="_blank" rel="noreferrer">Get started</a>
               </div>
             </div>
           </div>
@@ -641,7 +654,7 @@ export default function FindACarGuy() {
               </div>
               <div>
                 <div className="facg-photo-main">
-                  <img src={heroCar} alt="Charlie's 2000 Subaru Impreza 2.5 RS — STi swapped" style={{width:"100%",height:"100%",objectFit:"cover"}} />
+                  <img src="hero-car.jpg" alt="Charlie's 2000 Subaru Impreza 2.5 RS — STi swapped" style={{width:"100%",height:"100%",objectFit:"cover"}} />
                 </div>
                 <p style={{fontSize:"12px",color:"#aaa",marginTop:"6px",marginBottom:"8px",fontStyle:"italic"}}>
                   2000 Subaru Impreza 2.5 RS — STi swapped. Totaled by a drowsy driver. Finding its replacement is what made me realize I was pretty good at this.
@@ -649,13 +662,13 @@ export default function FindACarGuy() {
                 <div className="facg-photo-grid">
                   <div>
                     <div className="facg-photo-sm">
-                      <img src={car2} alt="My wife's car — the day we bought it" style={{width:"100%",height:"100%",objectFit:"cover"}} />
+                      <img src="car2.jpg" alt="My wife's car — the day we bought it" style={{width:"100%",height:"100%",objectFit:"cover"}} />
                     </div>
                     <p style={{fontSize:"11px",color:"#aaa",marginTop:"4px",fontStyle:"italic"}}>She's not only a wife, she's a member. Helped her trade out of a 2007 RAV4.</p>
                   </div>
                   <div>
                     <div className="facg-photo-sm">
-                      <img src={car3} alt="My Shelby GT350 — red, no stripe, comfy seats" style={{width:"100%",height:"100%",objectFit:"cover"}} />
+                      <img src="car3.jpg" alt="My Shelby GT350 — red, no stripe, comfy seats" style={{width:"100%",height:"100%",objectFit:"cover"}} />
                     </div>
                     <p style={{fontSize:"11px",color:"#aaa",marginTop:"4px",fontStyle:"italic"}}>My GT350. Wanted one forever. Red, no stripe, comfy seats. Found it myself.</p>
                   </div>
@@ -667,90 +680,47 @@ export default function FindACarGuy() {
 
         {/* FORM */}
         <section className="facg-section facg-form-section" id="get-started">
-          <div className="facg-section-inner">
+          <div className="facg-section-inner" style={{ textAlign: "center" }}>
             <p className="facg-label">Get started</p>
             <h2>Let's find your car.</h2>
-            <p className="facg-form-intro">
+            <p className="facg-form-intro" style={{ margin: "0 auto 2.5rem" }}>
               No specs required. Just tell me about you and what you're looking for — I'll handle the rest.
             </p>
-            <form className="facg-form" onSubmit={e => e.preventDefault()}>
-
-              <div className="facg-field">
-                <label className="facg-label-text">
-                  What's the best car you've ever owned — and what made it great?
-                  <span className="facg-hint">or "I've never found one I loved"</span>
-                </label>
-                <textarea
-                  className="facg-textarea"
-                  placeholder="e.g. My 2004 Tacoma. Never broke down, went anywhere, fit my whole life in the bed..."
-                />
-              </div>
-
-              <div className="facg-field">
-                <label className="facg-label-text">What will you mostly use this car for?</label>
-                <ChipGroup options={["Daily commute", "Family hauler", "Weekend fun", "Off-road / outdoors", "Work / hauling", "Road trips", "All of the above"]} />
-              </div>
-
-              <div className="facg-field">
-                <label className="facg-label-text">New or pre-owned?</label>
-                <ChipGroup multi={false} options={["New", "Pre-owned", "Either — show me the best value"]} />
-              </div>
-
-              <div className="facg-field">
-                <label className="facg-label-text">
-                  Budget range
-                  <span className="facg-hint">ballpark is fine</span>
-                </label>
-                <ChipGroup multi={false} options={["Under $10k", "Under $15k", "$15k–$25k", "$25k–$40k", "$40k–$60k", "$60k+"]} />
-              </div>
-
-              <div className="facg-field">
-                <label className="facg-label-text">
-                  Preferred mileage range
-                  <span className="facg-hint">optional</span>
-                </label>
-                <ChipGroup multi={false} options={["Under 20k", "Under 50k", "Under 75k", "Under 100k", "Any mileage"]} />
-              </div>
-
-              <div className="facg-field">
-                <label className="facg-label-text">
-                  Any hard nos or must-haves?
-                  <span className="facg-hint">optional</span>
-                </label>
-                <textarea
-                  className="facg-textarea"
-                  style={{ minHeight: 70 }}
-                  placeholder="e.g. Must fit a car seat. No white cars. Needs good cargo space. Good in snow."
-                />
-              </div>
-
-              <div className="facg-divider" />
-
-              <div className="facg-row">
-                <div className="facg-field" style={{ marginBottom: 0 }}>
-                  <label className="facg-label-text">Your name</label>
-                  <input type="text" className="facg-input" placeholder="First name is fine" />
-                </div>
-                <div className="facg-field" style={{ marginBottom: 0 }}>
-                  <label className="facg-label-text">Email</label>
-                  <input type="email" className="facg-input" placeholder="you@example.com" />
-                </div>
-              </div>
-
-              <div className="facg-field" style={{ marginTop: "1.5rem" }}>
-                <label className="facg-label-text">How soon are you looking?</label>
-                <ChipGroup multi={false} options={["ASAP", "1–3 months", "3–6 months", "Just researching"]} />
-              </div>
-
-              <button type="submit" className="facg-submit">
-                Send it — $300 flat fee
-              </button>
-              <p className="facg-submit-sub">
-                You'll get 5 vetted car options within 48 hours. No upsells. No pressure.
-              </p>
-            </form>
+            <button
+              className="facg-btn-primary"
+              style={{ fontSize: "17px", padding: "16px 40px" }}
+              onClick={() => {
+                const modal = document.getElementById("tally-modal")
+                if (modal) modal.style.display = "flex"
+              }}
+            >
+              Find My Car — Get Started
+            </button>
+            <p className="facg-submit-sub" style={{ marginTop: "1rem" }}>Takes about 3 minutes. You'll hear back within 48 hours.</p>
           </div>
         </section>
+
+        {/* TALLY MODAL */}
+        <div
+          id="tally-modal"
+          style={{ display: "none", position: "fixed", inset: 0, background: "rgba(0,0,0,0.6)", zIndex: 1000, alignItems: "center", justifyContent: "center", padding: "1rem" }}
+          onClick={(e) => { if ((e.target as HTMLElement).id === "tally-modal") { (document.getElementById("tally-modal") as HTMLElement).style.display = "none" } }}
+        >
+          <div style={{ background: "#fff", borderRadius: "16px", width: "100%", maxWidth: "680px", height: "85vh", overflow: "hidden", position: "relative", display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem 1.5rem", borderBottom: "0.5px solid #e5e5e5", flexShrink: 0 }}>
+              <span style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "1rem" }}>Find A Car Guy</span>
+              <button
+                onClick={() => { (document.getElementById("tally-modal") as HTMLElement).style.display = "none" }}
+                style={{ background: "none", border: "none", fontSize: "22px", cursor: "pointer", color: "#999", lineHeight: 1 }}
+              >×</button>
+            </div>
+            <iframe
+              src="https://tally.so/embed/9qM02Q?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              style={{ flex: 1, border: "none", width: "100%" }}
+              title="Find A Car Guy intake form"
+            />
+          </div>
+        </div>
 
         {/* FOOTER */}
         <footer className="facg-footer">
