@@ -526,7 +526,7 @@ export default function FindACarGuy() {
         {/* NAV */}
         <nav className="facg-nav">
           <a href="#" className="facg-nav-logo">FindACarGuy</a>
-          <button className="facg-nav-cta" onClick={scrollToForm}>Get started</button>
+          <a className="facg-nav-cta" href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00" target="_blank" rel="noreferrer">Get started</a>
         </nav>
 
         {/* HERO */}
@@ -536,7 +536,7 @@ export default function FindACarGuy() {
           <p className="facg-hero-body">
             Tell me what you want. I'll find you five real, vetted options — the right car, at the right price, without the runaround.
           </p>
-          <button className="facg-btn-primary" onClick={scrollToForm}>Get started — $300</button>
+          <a className="facg-btn-primary" href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00" target="_blank" rel="noreferrer">Get started — $300</a>
           <p className="facg-hero-sub">Flat fee. One free revision round. No upsells. No pressure.</p>
         </section>
 
@@ -607,7 +607,7 @@ export default function FindACarGuy() {
                     "Follow-up Q&A included",
                   ].map(item => <li key={item}>{item}</li>)}
                 </ul>
-                <a className="facg-btn-primary" style={{ width: "100%", textAlign: "center", justifyContent: "center" }} href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00" target="_blank" rel="noreferrer">Get started</a>
+                <a className="facg-btn-primary" style={{ width: "100%", textAlign: "center", justifyContent: "center" }} href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00" target="_blank" rel="noreferrer">Get started — $300</a>
               </div>
               <div className="facg-price-card" style={{ borderColor: "#1D9E75", position: "relative" }}>
                 <div style={{ position: "absolute", top: "-12px", left: "50%", transform: "translateX(-50%)", background: "#1D9E75", color: "#fff", fontSize: "11px", fontWeight: 500, padding: "4px 14px", borderRadius: "100px", whiteSpace: "nowrap" }}>Most popular</div>
@@ -624,10 +624,9 @@ export default function FindACarGuy() {
                     "Never make an awkward call",
                   ].map(item => <li key={item}>{item}</li>)}
                 </ul>
-                <a className="facg-btn-primary" style={{ width: "100%", textAlign: "center", justifyContent: "center" }} href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00" target="_blank" rel="noreferrer">Get started</a>
+                <a className="facg-btn-primary" style={{ width: "100%", textAlign: "center", justifyContent: "center" }} href="https://buy.stripe.com/4gMdR26Kv7Gj4OffI4fbq01" target="_blank" rel="noreferrer">Get started — $450</a>
               </div>
             </div>
-            <p style={{ fontSize: "13px", color: "#aaa", marginTop: "1.25rem" }}>Both options will appear at checkout — simply set the one you don't want to 0.</p>
           </div>
         </section>
 
@@ -732,6 +731,7 @@ export default function FindACarGuy() {
           <p className="facg-footer-note">
             FindACarGuy is an independent car research and consulting service. We do not sell vehicles, handle transactions, or represent any dealer or seller.
           </p>
+          <p style={{ fontSize: "13px", color: "#aaa", marginTop: "0.5rem" }}>Questions? Email me directly — <a href="mailto:charlie@findacarguy.com" style={{ color: "#1D9E75", textDecoration: "none" }}>charlie@findacarguy.com</a></p>
         </footer>
 
       </div>
