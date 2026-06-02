@@ -689,16 +689,15 @@ export default function FindACarGuy() {
             <p className="facg-form-intro" style={{ margin: "0 auto 2.5rem" }}>
               No specs required. Just tell me about you and what you're looking for — I'll handle the rest.
             </p>
-            <button
+            <a
               className="facg-btn-primary"
               style={{ fontSize: "17px", padding: "16px 40px" }}
-              onClick={() => {
-                const modal = document.getElementById("tally-modal")
-                if (modal) modal.style.display = "flex"
-              }}
+              href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00"
+              target="_blank"
+              rel="noreferrer"
             >
               Find My Car — Get Started
-            </button>
+            </a>
             <p className="facg-submit-sub" style={{ marginTop: "1rem" }}>Takes about 3 minutes. You'll hear back within 48 hours.</p>
           </div>
         </section>
