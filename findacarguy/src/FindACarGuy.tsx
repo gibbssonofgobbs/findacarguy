@@ -624,6 +624,7 @@ export default function FindACarGuy() {
                 <a className="facg-btn-primary" style={{ width: "100%", textAlign: "center", justifyContent: "center" }} href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00" target="_blank" rel="noreferrer">Get started</a>
               </div>
             </div>
+            <p style={{ fontSize: "13px", color: "#aaa", marginTop: "1.25rem" }}>Both options will appear at checkout — simply set the one you don't want to 0.</p>
           </div>
         </section>
 
