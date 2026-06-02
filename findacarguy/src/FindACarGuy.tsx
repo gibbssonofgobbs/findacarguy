@@ -526,7 +526,7 @@ export default function FindACarGuy() {
         {/* NAV */}
         <nav className="facg-nav">
           <a href="#" className="facg-nav-logo">FindACarGuy</a>
-          <a className="facg-nav-cta" href="https://buy.stripe.com/4gM8wIb0L7GjbcDfI4fbq00" target="_blank" rel="noreferrer">Get started</a>
+          <a className="facg-nav-cta" href="/#pricing">Get started</a>
         </nav>
 
         {/* HERO */}
@@ -588,7 +588,7 @@ export default function FindACarGuy() {
         </section>
 
         {/* PRICING */}
-        <section className="facg-section">
+        <section className="facg-section" id="pricing">
           <div className="facg-section-inner" style={{ textAlign: "center" }}>
             <p className="facg-label">Pricing</p>
             <h2>Transparent pricing. No surprises.</h2>
