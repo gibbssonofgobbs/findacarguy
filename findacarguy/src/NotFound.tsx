@@ -101,9 +101,9 @@ export default function NotFound() {
         <p className="nf-sub">This page doesn't exist — but your perfect car does.</p>
 
         <div className="nf-btns">
-          <button className="nf-btn-primary" onClick={openModal}>
+          <a className="nf-btn-primary" href="/#pricing">
             🚗 Let's go find it
-          </button>
+          </a>
           <a
             className="nf-btn-secondary"
             href="https://www.youtube.com/watch?v=QxIWDmmqZzY"
